@@ -6888,6 +6888,10 @@ body.callback-open .callback-backdrop {
   position: relative;
 }
 
+.spaces-dropdown.is-open {
+  z-index: 140;
+}
+
 .spaces-dropdown__trigger {
   display: flex;
   align-items: center;
@@ -6940,10 +6944,11 @@ body.callback-open .callback-backdrop {
   top: calc(100% + 8px);
   left: 0;
   right: 0;
-  z-index: 60;
+  z-index: 160;
   display: grid;
   gap: 4px;
   padding: 6px;
+  max-height: min(320px, 52vh);
   border: 1px solid rgba(var(--white-rgb), 0.18);
   border-radius: 0;
   background:
@@ -6954,7 +6959,9 @@ body.callback-open .callback-backdrop {
     inset 0 1px 0 rgba(var(--white-rgb), 0.12);
   backdrop-filter: blur(30px) saturate(140%);
   -webkit-backdrop-filter: blur(30px) saturate(140%);
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .spaces-dropdown__option {
@@ -7264,6 +7271,17 @@ body.is-lot-view footer {
   color: var(--white);
   overflow: hidden;
   border-radius: 0;
+}
+
+.hero-search:has(.spaces-dropdown.is-open),
+.lot-catalog__filters:has(.spaces-dropdown.is-open) {
+  z-index: 120;
+}
+
+.lot-catalog__hero:has(.spaces-dropdown.is-open),
+.lot-catalog__intro:has(.spaces-dropdown.is-open) {
+  overflow: visible;
+  z-index: 40;
 }
 
 .lot-catalog__intro::after {
