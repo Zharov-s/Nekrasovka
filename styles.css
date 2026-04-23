@@ -910,6 +910,11 @@ body.callback-open .callback-backdrop {
   overflow-y: visible;
 }
 
+.hero:has(.spaces-dropdown.is-open) {
+  z-index: 80;
+  overflow: visible;
+}
+
 .hero-overlay {
   display: none;
 }
