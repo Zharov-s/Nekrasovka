@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Промышленный парк в Некрасовке — площади для производства и бизнеса." />
+  <title>ABCentrum — Промышленный парк в Некрасовке</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="menu-backdrop" data-menu-close></div>
+
+  <header class="site-header">
+    <div class="header-shell">
+      <a class="brand-mark" href="#hero" aria-label="ABCentrum — на главный экран">
+        <img src="assets/logo.svg" alt="ABCentrum" class="brand-logo" />
+      </a>
+
+      <div class="header-actions">
+        <a class="telegram-button" href="https://t.me/abcentrum_dev" aria-label="Написать в Telegram">
+          <img src="assets/telegram.svg" alt="" class="telegram-icon" />
+        </a>
+
+        <a class="header-phone" href="tel:+79585004830">+7 (958) 500-48-30</a>
+
+        <button class="cta-button" type="button" data-open-callback>
+          <span>ОСТАВИТЬ ЗАЯВКУ</span>
+          <span class="cta-arrow" aria-hidden="true">↗</span>
+        </button>
+
+        <button class="header-favorites" type="button" id="headerFavoritesBtn" aria-label="Избранное">
+          <svg width="20" height="18" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          </svg>
+          <span class="header-favorites__count" id="headerFavoritesCount" aria-label="Количество избранных">0</span>
+        </button>
+
+        <button
+          class="burger-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-menu"
+          aria-label="Открыть меню"
+          id="burgerButton"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="site-menu" id="site-menu" aria-hidden="true">
+    <div class="site-menu__inner">
+      <div class="site-menu__content">
+        <a class="menu-link" href="#about">
+          <span class="menu-index">01</span>
+          <span class="menu-text">О ПРОЕКТЕ</span>
+        </a>
+        <a class="menu-link" href="#specs">
+          <span class="menu-index">02</span>
+          <span class="menu-text">ТЕХНИЧЕСКИЕ ХАРАКТЕРИСТИКИ</span>
+        </a>
+        <a class="menu-link" href="#composition">
+          <span class="menu-index">03</span>
+          <span class="menu-text">ФУНКЦИОНАЛЬНЫЙ СОСТАВ ОБЪЕКТА</span>
+        </a>
+        <a class="menu-link" href="#location">
+          <span class="menu-index">04</span>
+          <span class="menu-text">ЛОКАЦИЯ</span>
+        </a>
+        <a class="menu-link" href="#roadmap">
+          <span class="menu-index">05</span>
+          <span class="menu-text">ДОРОЖНАЯ КАРТА</span>
+        </a>
+        <a class="menu-link" href="#rent">
+          <span class="menu-index">06</span>
+          <span class="menu-text">АРЕНДА</span>
+        </a>
+        <a class="menu-link" href="#sale">
+          <span class="menu-index">07</span>
+          <span class="menu-text">ПРОДАЖА</span>
+        </a>
+        <a class="menu-link" href="#contacts" id="menu-contact-link">
+          <span class="menu-index">08</span>
+          <span class="menu-text">КОНТАКТЫ</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="callback-backdrop" data-callback-close hidden></div>
+  <section
+    class="callback-modal"
+    aria-hidden="true"
+    aria-labelledby="callbackTitle"
+    role="dialog"
+    data-callback-modal
+    hidden
+  >
+    <div class="callback-modal__shell">
+      <button
+        class="callback-modal__close"
+        type="button"
+        aria-label="Закрыть форму обратного звонка"
+        data-callback-close
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="callback-modal__eyebrow">Обратный звонок</div>
+      <h2 class="callback-modal__title" id="callbackTitle">Оставьте заявку, и мы свяжемся с вами</h2>
+
+      <form class="callback-form" data-callback-form novalidate>
+        <input type="hidden" name="_subject" value="Новая заявка на обратный звонок — ABCentrum" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+
+        <label class="callback-field">
+          <span class="callback-field__label">Имя</span>
+          <input
+            class="callback-field__input"
+            type="text"
+            name="name"
+            placeholder="Ваше имя"
+            autocomplete="name"
+          />
+        </label>
+
+        <label class="callback-field">
+          <span class="callback-field__label">Телефон</span>
+          <input
+            class="callback-field__input"
+            type="tel"
+            name="phone"
+            placeholder="+7 (___) ___-__-__"
+            autocomplete="tel"
+            inputmode="tel"
+            required
+          />
+        </label>
+
+        <label class="callback-field">
+          <span class="callback-field__label">Компания</span>
+          <input
+            class="callback-field__input"
+            type="text"
+            name="company"
+            placeholder="Название компании"
+            autocomplete="organization"
+          />
+        </label>
+
+        <label class="callback-field callback-field--wide">
+          <span class="callback-field__label">Комментарий</span>
+          <textarea
+            class="callback-field__input callback-field__input--textarea"
+            name="comment"
+            rows="4"
+            placeholder="Например: интересует аренда 1 этажа или покупка объекта"
+          ></textarea>
+        </label>
+
+        <div class="callback-form__footer">
+          <button class="callback-submit" type="submit">
+            <span>Отправить заявку</span>
+            <span class="callback-submit__arrow" aria-hidden="true">↗</span>
+          </button>
+        </div>
+
+        <p class="callback-form__status" data-callback-status aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-grid"></div>
+
+      <div class="hero-inner">
+        <div class="hero-topline">
+          <span>ЮВАО Москвы</span>
+        </div>
+
+        <div class="hero-main">
+          <div class="hero-metrics" aria-label="Ключевые показатели проекта">
+            <article class="hero-metric">
+              <p class="hero-metric-value" data-counter data-counter-type="number" data-counter-target="5507" data-counter-suffix=" м²">0 м²</p>
+              <p class="hero-metric-label hero-metric-label--wide">общая площадь<br />здания</p>
+            </article>
+
+            <article class="hero-metric">
+              <p class="hero-metric-value" data-counter data-counter-type="number" data-counter-target="800" data-counter-suffix=" кВт">0 кВт</p>
+              <p class="hero-metric-label">электрическая мощность</p>
+            </article>
+
+            <article class="hero-metric">
+              <p class="hero-metric-value" data-counter data-counter-type="quarter-year" data-counter-quarter="4" data-counter-year="2027">0 кв 0</p>
+              <p class="hero-metric-label">ввод в эксплуатацию</p>
+            </article>
+          </div>
+
+          <div class="hero-content">
+            <div class="hero-heading-block">
+              <p class="hero-kicker">Площади для производства и бизнеса</p>
+              <h1>ПРОМЫШЛЕННЫЙ<br />ПАРК В НЕКРАСОВКЕ</h1>
+            </div>
+
+            <div class="hero-divider"></div>
+
+            <div class="hero-info-grid">
+              <div class="hero-description">
+                <p class="hero-lead">Современный промышленный объект в ЮВАО Москвы</p>
+                <p class="hero-note">
+                  Производственные, административные и сервисные площади в одном здании с
+                  удобной логистикой, выразительной архитектурой и быстрым доступом к
+                  ключевым магистралям Московской агломерации.
+                </p>
+              </div>
+
+              <div class="hero-inline-address">
+                <span class="address-label">Адрес</span>
+                <p>Москва, район Некрасовка, пересечение проектируемых проездов 83 и 4296</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <form class="hero-search" data-search-form="hero" novalidate>
+          <div class="spaces-toggle" role="tablist" aria-label="Тип сделки">
+            <button class="spaces-toggle__button is-active" type="button" data-transaction-button data-transaction="rent">АРЕНДА</button>
+            <button class="spaces-toggle__button" type="button" data-transaction-button data-transaction="purchase">ПОКУПКА</button>
+          </div>
+
+          <div class="spaces-range" data-range-control>
+            <div class="spaces-range__fields">
+              <label class="spaces-range__field">
+                <span class="spaces-range__caption">ОТ</span>
+                <input class="spaces-range__input" type="number" inputmode="numeric" min="196" max="5507" step="1" value="196" data-filter-input="areaMin" />
+                <span class="spaces-range__unit">м²</span>
+              </label>
+
+              <span class="spaces-range__divider" aria-hidden="true"></span>
+
+              <label class="spaces-range__field">
+                <span class="spaces-range__caption">ДО</span>
+                <input class="spaces-range__input" type="number" inputmode="numeric" min="196" max="5507" step="1" value="5507" data-filter-input="areaMax" />
+                <span class="spaces-range__unit">м²</span>
+              </label>
+            </div>
+
+            <div class="spaces-range__slider">
+              <span class="spaces-range__track"></span>
+              <span class="spaces-range__fill" data-range-fill></span>
+              <input class="spaces-range__native spaces-range__native--min" type="range" min="196" max="5507" step="1" value="196" data-range-input="min" aria-label="Минимальная площадь" />
+              <input class="spaces-range__native spaces-range__native--max" type="range" min="196" max="5507" step="1" value="5507" data-range-input="max" aria-label="Максимальная площадь" />
+            </div>
+          </div>
+
+          <div class="spaces-select spaces-dropdown" data-dropdown="format">
+            <button class="spaces-dropdown__trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
+              <span class="spaces-dropdown__value" data-dropdown-value>ФОРМАТ</span>
+            </button>
+            <div class="spaces-dropdown__menu" role="listbox" data-dropdown-menu hidden></div>
+            <input type="hidden" value="" data-filter-input="format" />
+          </div>
+
+          <button class="spaces-submit" type="submit" data-search-submit>
+            ПОДОБРАТЬ ПОМЕЩЕНИЕ
+          </button>
+        </form>
+
+        <div class="hero-mobile-actions" aria-label="Быстрые действия">
+          <a class="hero-mobile-action" href="#rent">АРЕНДОВАТЬ</a>
+          <a class="hero-mobile-action" href="#sale">КУПИТЬ</a>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="site-view-block lot-catalog" data-site-view="catalog" hidden>
+      <div class="lot-catalog__shell">
+        <div class="lot-catalog__hero">
+          <div class="lot-catalog__intro">
+            <div class="lot-catalog__hero-actions">
+              <a
+                class="view-pill capsule-cut"
+                href="https://www.google.com/maps/dir/?api=1&destination=55.676541,37.930739&travelmode=driving"
+                data-navigator-link
+                data-navi-url="yandexnavi://build_route_on_map?lat_to=55.676541&lon_to=37.930739"
+                data-fallback-url="https://www.google.com/maps/dir/?api=1&destination=55.676541,37.930739&travelmode=driving"
+                target="_blank"
+                rel="noreferrer"
+              >
+                ПРОЛОЖИТЬ МАРШРУТ
+              </a>
+
+              <a class="view-pill view-pill--dark capsule-cut" href="#about">О ПРОЕКТЕ</a>
+            </div>
+
+            <div class="lot-catalog__title-block">
+              <img class="lot-catalog__hero-image" src="assets/hero.jpg" alt="Промышленный парк Некрасовка" />
+              <h2 class="visually-hidden">НЕКРАСОВКА</h2>
+            </div>
+          </div>
+
+          <div class="lot-catalog__map-card">
+            <iframe
+              title="Карта расположения объекта"
+              src="https://www.google.com/maps?q=55.676541,37.930739&z=14&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+
+        <form class="lot-catalog__filters" data-search-form="catalog" novalidate>
+          <div class="spaces-toggle" role="tablist" aria-label="Тип сделки">
+            <button class="spaces-toggle__button is-active" type="button" data-transaction-button data-transaction="rent">АРЕНДА</button>
+            <button class="spaces-toggle__button" type="button" data-transaction-button data-transaction="purchase">ПОКУПКА</button>
+          </div>
+
+          <div class="spaces-range" data-range-control>
+            <div class="spaces-range__fields">
+              <label class="spaces-range__field">
+                <span class="spaces-range__caption">ОТ</span>
+                <input class="spaces-range__input" type="number" inputmode="numeric" min="196" max="5507" step="1" value="196" data-filter-input="areaMin" />
+                <span class="spaces-range__unit">м²</span>
+              </label>
+
+              <span class="spaces-range__divider" aria-hidden="true"></span>
+
+              <label class="spaces-range__field">
+                <span class="spaces-range__caption">ДО</span>
+                <input class="spaces-range__input" type="number" inputmode="numeric" min="196" max="5507" step="1" value="5507" data-filter-input="areaMax" />
+                <span class="spaces-range__unit">м²</span>
+              </label>
+            </div>
+
+            <div class="spaces-range__slider">
+              <span class="spaces-range__track"></span>
+              <span class="spaces-range__fill" data-range-fill></span>
+              <input class="spaces-range__native spaces-range__native--min" type="range" min="196" max="5507" step="1" value="196" data-range-input="min" aria-label="Минимальная площадь" />
+              <input class="spaces-range__native spaces-range__native--max" type="range" min="196" max="5507" step="1" value="5507" data-range-input="max" aria-label="Максимальная площадь" />
+            </div>
+          </div>
+
+          <div class="spaces-select spaces-dropdown" data-dropdown="format">
+            <button class="spaces-dropdown__trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
+              <span class="spaces-dropdown__value" data-dropdown-value>ФОРМАТ</span>
+            </button>
+            <div class="spaces-dropdown__menu" role="listbox" data-dropdown-menu hidden></div>
+            <input type="hidden" value="" data-filter-input="format" />
+          </div>
+
+          <button class="catalog-reset" type="button" aria-label="Сбросить фильтры" data-catalog-reset data-tooltip="СБРОСИТЬ ФИЛЬТР" hidden>
+            <span></span>
+            <span></span>
+          </button>
+        </form>
+
+        <div class="lot-catalog__table-shell">
+          <div class="lot-catalog__table-meta">
+            <p class="lot-catalog__result-copy" data-catalog-results-copy></p>
+          </div>
+
+          <div class="lot-table">
+            <div class="lot-table__head" aria-hidden="true">
+              <span>ПРЕДЛОЖЕНИЕ</span>
+              <span>УРОВЕНЬ</span>
+              <span>ПЛОЩАДЬ</span>
+              <span>ПАРАМЕТРЫ</span>
+              <span>ГОТОВНОСТЬ</span>
+              <span data-catalog-price-heading>СТАВКА АРЕНДЫ</span>
+            </div>
+
+            <div class="lot-table__body" data-lots-table></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="site-view-block lot-detail" data-site-view="detail" hidden>
+      <div class="lot-detail__shell">
+        <header class="lot-detail__header">
+          <p class="lot-detail__kicker">Карточка помещения</p>
+        </header>
+
+        <div class="lot-detail__layout">
+          <div class="lot-detail__media-column">
+            <div class="lot-detail__toolbar">
+              <button class="view-pill capsule-cut" type="button" data-view-back-catalog>
+                <span aria-hidden="true">←</span>
+                <span>ВЫБОР ПОМЕЩЕНИЙ</span>
+              </button>
+            </div>
+
+            <div class="lot-detail__plan-stage">
+              <div class="lot-detail__plan-image-wrap">
+                <img class="lot-detail__plan-image" src="assets/layouts/1_floor_transparent.svg" alt="Планировка помещения" data-lot-plan-image />
+              </div>
+
+              <div class="lot-detail__plan-tabs">
+                <button class="lot-detail__plan-tab is-active capsule-cut" type="button" data-detail-media="plan">ПЛАНИРОВКА</button>
+              </div>
+            </div>
+          </div>
+
+          <aside class="lot-detail__summary">
+            <div class="lot-detail__summary-top">
+              <div class="spaces-toggle capsule-cut lot-detail__mode-toggle" role="tablist" aria-label="Тип сделки на карточке">
+                <button class="spaces-toggle__button is-active" type="button" data-detail-transaction="rent">АРЕНДА</button>
+                <button class="spaces-toggle__button" type="button" data-detail-transaction="purchase">ПОКУПКА</button>
+              </div>
+
+              <button class="lot-detail__favorite" type="button" aria-label="Добавить в избранное">
+                <span aria-hidden="true">♡</span>
+              </button>
+            </div>
+
+            <div class="lot-detail__headline">
+              <h2 class="lot-detail__format" data-lot-format>LIGHT INDUSTRIAL</h2>
+              <p class="lot-detail__area" data-lot-area>1 012 м²</p>
+            </div>
+
+            <div class="lot-detail__price-row">
+              <div class="lot-detail__price-copy">
+                <p class="lot-detail__price-label" data-lot-price-label>С УЧЕТОМ НДС</p>
+                <p class="lot-detail__price-value" data-lot-price>143 588 632 ₽</p>
+              </div>
+
+              <button class="lot-detail__cta capsule-cut" type="button" data-open-callback>
+                <span>ОСТАВИТЬ ЗАЯВКУ</span>
+                <span aria-hidden="true">+</span>
+              </button>
+            </div>
+
+            <div class="lot-detail__facts">
+              <article class="lot-detail__fact">
+                <span class="lot-detail__fact-label">ПРОЕКТ</span>
+                <span class="lot-detail__fact-value" data-lot-project>НЕКРАСОВКА</span>
+              </article>
+
+              <article class="lot-detail__fact">
+                <span class="lot-detail__fact-label">УРОВЕНЬ</span>
+                <span class="lot-detail__fact-value" data-lot-level>1 этаж</span>
+              </article>
+
+              <article class="lot-detail__fact">
+                <span class="lot-detail__fact-label">ОБЩАЯ ПЛОЩАДЬ</span>
+                <span class="lot-detail__fact-value" data-lot-total-area>2 509,78 м²</span>
+              </article>
+
+              <article class="lot-detail__fact">
+                <span class="lot-detail__fact-label">ВЫСОТА ПОТОЛКА</span>
+                <span class="lot-detail__fact-value" data-lot-ceiling-height>8,0 м</span>
+              </article>
+
+              <article class="lot-detail__fact">
+                <span class="lot-detail__fact-label" data-lot-secondary-label>НАГРУЗКА НА ПЕРЕКРЫТИЕ</span>
+                <span class="lot-detail__fact-value" data-lot-secondary-value>5,0 т/м²</span>
+              </article>
+
+              <article class="lot-detail__fact">
+                <span class="lot-detail__fact-label">ГОТОВНОСТЬ</span>
+                <span class="lot-detail__fact-value" data-lot-readiness>Q4 2027</span>
+              </article>
+
+              <article class="lot-detail__fact">
+                <span class="lot-detail__fact-label">ЭЛЕКТРИЧЕСКАЯ МОЩНОСТЬ</span>
+                <span class="lot-detail__fact-value">800 кВт</span>
+              </article>
+
+              <article class="lot-detail__fact">
+                <span class="lot-detail__fact-label">ОБЩАЯ ПЛОЩАДЬ ЗДАНИЯ</span>
+                <span class="lot-detail__fact-value">5 507 м²</span>
+              </article>
+
+              <article class="lot-detail__fact">
+                <span class="lot-detail__fact-label">АРЕНДОПРИГОДНАЯ ПЛОЩАДЬ</span>
+                <span class="lot-detail__fact-value">5 188,73 м²</span>
+              </article>
+
+              <article class="lot-detail__fact">
+                <span class="lot-detail__fact-label">ШАГ КОЛОНН</span>
+                <span class="lot-detail__fact-value">6×9 м и 12×9 м</span>
+              </article>
+            </div>
+          </aside>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-shell">
+        <div class="about-top">
+          <div class="about-heading">
+            <p class="about-kicker">О ПРОЕКТЕ</p>
+            <h2>
+              Производственные, административные и сервисные площади в одном здании
+            </h2>
+            <p class="about-description">
+              Промышленный парк в Некрасовке — современный объект light industrial в городской
+              локации, рассчитанный на размещение производства, административной и сервисной
+              функции в одном здании. Проект сочетает удобство для операционной деятельности,
+              представительский внешний вид и выгодное расположение в сформированном
+              промышленном кластере юго-востока Москвы. За счёт удобного выезда на ключевые
+              магистрали объект особенно эффективен для компаний, которым важны быстрая
+              логистика, стабильная работа внутри города и комфорт для персонала. Ввод в
+              эксплуатацию запланирован на IV квартал 2027 года.
+            </p>
+          </div>
+
+          <div
+            class="about-media-shell"
+            data-about-carousel
+            data-about-carousel-images="assets/about-project.jpg|assets/01.jpg|assets/02.jpg|assets/03.jpg|assets/002.jpg|assets/04.jpg"
+          >
+            <button class="about-media" type="button" aria-label="Показать следующее изображение проекта">
+              <img src="assets/about-project.jpg" alt="Визуализация промышленного объекта в Некрасовке" />
+            </button>
+
+            <div class="about-carousel-controls" aria-label="Навигация по изображениям проекта">
+              <p class="about-carousel-index" aria-live="polite">01 / 06</p>
+              <button class="about-carousel-arrow" type="button" aria-label="Следующее изображение проекта"></button>
+            </div>
+          </div>
+
+          <div class="about-stat-grid" aria-label="Ключевые параметры проекта">
+            <article class="about-stat-card">
+              <p class="about-stat-value" data-counter data-counter-type="number" data-counter-target="2" data-counter-suffix=" уровня">0 уровня</p>
+              <p class="about-stat-note">надземная часть</p>
+            </article>
+
+            <article class="about-stat-card">
+              <p class="about-stat-value" data-counter data-counter-type="number" data-counter-target="1" data-counter-suffix=" уровень">0 уровень</p>
+              <p class="about-stat-note">подземный уровень</p>
+            </article>
+
+            <article class="about-stat-card">
+              <p class="about-stat-value" data-counter data-counter-type="number" data-counter-target="20" data-counter-suffix=" м/м">0 м/м</p>
+              <p class="about-stat-note about-stat-note--parking">
+                включая 3 места<br />с зарядкой
+              </p>
+            </article>
+
+            <article class="about-stat-card">
+              <p class="about-stat-value" data-counter data-counter-type="number" data-counter-target="6688" data-counter-suffix=" м²">0 м²</p>
+              <p class="about-stat-note">площадь участка</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="about-benefits" aria-label="Преимущества проекта">
+          <article class="about-benefit">
+            <img src="icons/production.svg" alt="" class="about-benefit-icon" />
+            <p class="about-benefit-text">Производственные площади</p>
+          </article>
+
+          <article class="about-benefit">
+            <img src="icons/191219.svg" alt="" class="about-benefit-icon" />
+            <p class="about-benefit-text">Городская локация</p>
+          </article>
+
+          <article class="about-benefit">
+            <img src="icons/554751.svg" alt="" class="about-benefit-icon" />
+            <p class="about-benefit-text">Административные<br />и офисные площади</p>
+          </article>
+
+          <article class="about-benefit about-benefit--logistics">
+            <img
+              src="icons/png-clipart-logistics-transport-.svg"
+              alt=""
+              class="about-benefit-icon about-benefit-icon--logistics"
+            />
+            <p class="about-benefit-text">Удобная логистика</p>
+          </article>
+
+          <article class="about-benefit">
+            <img src="icons/5062832.svg" alt="" class="about-benefit-icon" />
+            <p class="about-benefit-text">Сервисные и вспомогательные зоны</p>
+          </article>
+
+          <article class="about-benefit">
+            <img src="icons/63610.svg" alt="" class="about-benefit-icon" />
+            <p class="about-benefit-text">Современная архитектура</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="specs" id="specs">
+      <div class="specs-shell">
+        <div class="specs-heading">
+          <p class="specs-kicker">ТЕХНИЧЕСКИЕ ХАРАКТЕРИСТИКИ</p>
+          <h2>Параметры объекта по уровням и ключевые показатели здания</h2>
+        </div>
+
+        <div class="specs-layout">
+          <figure class="specs-visual specs-visual--exploded">
+            <img src="assets/exploded_view_transparent.svg" alt="Взрыв-схема технических характеристик объекта" />
+          </figure>
+
+          <div class="specs-levels" aria-label="Параметры по уровням">
+            <p class="specs-subtitle">По уровням</p>
+
+            <article class="specs-level-row">
+              <div class="specs-level-main">
+                <div class="specs-level-icon" aria-hidden="true">
+                  <img src="assets/elements/-1_floor.svg" alt="" />
+                </div>
+                <div class="specs-level-copy">
+                  <h3>-1 этаж</h3>
+                  <p class="specs-level-area">подземно-технический уровень · 229,18 м²</p>
+                </div>
+              </div>
+
+              <div class="specs-level-facts specs-level-facts--single">
+                <div class="specs-fact">
+                  <span class="specs-fact-label">Функция</span>
+                  <span class="specs-fact-value">технические помещения</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="specs-level-row">
+              <div class="specs-level-main">
+                <div class="specs-level-icon" aria-hidden="true">
+                  <img src="assets/elements/1_floor.svg" alt="" />
+                </div>
+                <div class="specs-level-copy">
+                  <h3>1 этаж</h3>
+                  <p class="specs-level-area">2 509,78 м²</p>
+                </div>
+              </div>
+
+              <div class="specs-level-facts specs-level-facts--double">
+                <div class="specs-fact">
+                  <span class="specs-fact-label">Высота потолка</span>
+                  <span class="specs-fact-value">8,0 м</span>
+                </div>
+
+                <div class="specs-fact">
+                  <span class="specs-fact-label">Нагрузка на перекрытие</span>
+                  <span class="specs-fact-value">5,0 т/м²</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="specs-level-row">
+              <div class="specs-level-main">
+                <div class="specs-level-icon" aria-hidden="true">
+                  <img src="assets/elements/2_floor.svg" alt="" />
+                </div>
+                <div class="specs-level-copy">
+                  <h3>2 этаж</h3>
+                  <p class="specs-level-area">2 571,35 м²</p>
+                </div>
+              </div>
+
+              <div class="specs-level-facts specs-level-facts--double">
+                <div class="specs-fact">
+                  <span class="specs-fact-label">Высота потолка</span>
+                  <span class="specs-fact-value">6,2 м</span>
+                </div>
+
+                <div class="specs-fact">
+                  <span class="specs-fact-label">Нагрузка на перекрытие</span>
+                  <span class="specs-fact-value">1,5 т/м²</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="specs-level-row">
+              <div class="specs-level-main">
+                <div class="specs-level-icon" aria-hidden="true">
+                  <img src="assets/elements/mezzanine.svg" alt="" />
+                </div>
+                <div class="specs-level-copy">
+                  <h3>Антресоль</h3>
+                  <p class="specs-level-area">196,65 м²</p>
+                </div>
+              </div>
+
+              <div class="specs-level-facts specs-level-facts--single">
+                <div class="specs-fact">
+                  <span class="specs-fact-label">Высота потолка</span>
+                  <span class="specs-fact-value">4,0 м</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <figure class="specs-level-visual">
+            <img src="assets/03.jpg" alt="Визуализация промышленного объекта" />
+          </figure>
+
+          <aside class="specs-key" aria-label="Ключевые параметры">
+            <p class="specs-subtitle">Ключевые параметры</p>
+
+            <div class="specs-key-grid">
+              <article class="specs-key-item">
+                <p class="specs-key-value">800 кВт</p>
+                <p class="specs-key-label">электрическая мощность</p>
+              </article>
+
+              <article class="specs-key-item">
+                <p class="specs-key-value">5 507 м²</p>
+                <p class="specs-key-label">общая площадь здания</p>
+              </article>
+
+              <article class="specs-key-item">
+                <p class="specs-key-value">5 188,73 м²</p>
+                <p class="specs-key-label">арендопригодная площадь</p>
+              </article>
+
+              <article class="specs-key-item">
+                <p class="specs-key-value">6×9 м и 12×9 м</p>
+                <p class="specs-key-label">шаг колонн</p>
+              </article>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="composition" id="composition">
+      <div class="composition-shell">
+        <div class="composition-heading">
+          <p class="composition-kicker">ФУНКЦИОНАЛЬНЫЙ СОСТАВ ОБЪЕКТА</p>
+          <h2>Структура площадей и планировки по уровням</h2>
+        </div>
+
+        <div class="composition-layout">
+          <div class="composition-summary">
+            <div class="composition-total">
+              <p class="composition-total-label">Общая площадь</p>
+              <p class="composition-total-value">5 188,73 м²</p>
+            </div>
+
+            <div class="composition-breakdown">
+              <p class="composition-subtitle">Структура площадей</p>
+
+              <div class="composition-breakdown-list" aria-label="Распределение функциональных зон">
+                <article class="composition-breakdown-row">
+                  <p class="composition-area">3 921,43 м²</p>
+                  <p class="composition-label">Производственные</p>
+                  <p class="composition-percent">75.6%</p>
+                  <div class="composition-track" aria-hidden="true">
+                    <span class="composition-fill composition-fill--production" style="--composition-fill: 75.6%;"></span>
+                  </div>
+                </article>
+
+                <article class="composition-breakdown-row">
+                  <p class="composition-area">785,19 м²</p>
+                  <p class="composition-label">АБК</p>
+                  <p class="composition-percent">15.1%</p>
+                  <div class="composition-track" aria-hidden="true">
+                    <span class="composition-fill composition-fill--office" style="--composition-fill: 15.1%;"></span>
+                  </div>
+                </article>
+
+                <article class="composition-breakdown-row">
+                  <p class="composition-area">240,35 м²</p>
+                  <p class="composition-label">Вертикальные</p>
+                  <p class="composition-percent">4.6%</p>
+                  <div class="composition-track" aria-hidden="true">
+                    <span class="composition-fill composition-fill--vertical" style="--composition-fill: 4.6%;"></span>
+                  </div>
+                </article>
+
+                <article class="composition-breakdown-row">
+                  <p class="composition-area">226,57 м²</p>
+                  <p class="composition-label">Технические</p>
+                  <p class="composition-percent">4.4%</p>
+                  <div class="composition-track" aria-hidden="true">
+                    <span class="composition-fill composition-fill--technical" style="--composition-fill: 4.4%;"></span>
+                  </div>
+                </article>
+
+                <article class="composition-breakdown-row">
+                  <p class="composition-area">15,18 м²</p>
+                  <p class="composition-label">Общие зоны</p>
+                  <p class="composition-percent">0.3%</p>
+                  <div class="composition-track" aria-hidden="true">
+                    <span class="composition-fill composition-fill--common" style="--composition-fill: 0.3%;"></span>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <div class="composition-plans" aria-label="Планировки по уровням">
+            <article class="composition-plan-card composition-plan-card--basement">
+              <p class="composition-plan-label">-1 этаж</p>
+              <img src="assets/layouts/floorplan_transparent.svg" alt="Планировка подземно-технического уровня" />
+            </article>
+
+            <article class="composition-plan-card composition-plan-card--level-one">
+              <p class="composition-plan-label">1 этаж</p>
+              <img src="assets/layouts/1_floor_transparent.svg" alt="Планировка первого этажа" />
+            </article>
+
+            <article class="composition-plan-card composition-plan-card--mezzanine">
+              <p class="composition-plan-label">Антресоль</p>
+              <img src="assets/layouts/mezzanine_transparent.svg" alt="Планировка антресоли" />
+            </article>
+
+            <article class="composition-plan-card composition-plan-card--level-two">
+              <p class="composition-plan-label">2 этаж</p>
+              <img src="assets/layouts/2_floor_transparent.svg" alt="Планировка второго этажа" />
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="location" id="location">
+      <div class="location-shell">
+        <div class="location-heading">
+          <p class="location-kicker">ЛОКАЦИЯ</p>
+          <h2>Преимущества локации для логистики</h2>
+        </div>
+
+        <div class="location-layout">
+          <div class="location-copy">
+            <p>
+              Объект расположен в сформированном промышленном кластере на юго-востоке
+              Московской агломерации и обладает выгодной транспортной связностью с
+              ключевыми магистралями региона. <strong>Короткое плечо до МКАД</strong> в
+              сочетании с доступом к направлениям
+              <strong>Вешняки-Люберцы, Московскому скоростному диаметру</strong> и далее
+              <strong>М-12</strong> обеспечивает эффективную интеграцию площадки в
+              городской и региональный логистический контур. Близость
+              <strong>ТПУ «Некрасовка»</strong> и станции <strong>Люберцы II</strong>
+              дополнительно повышает транспортную доступность объекта для персонала и
+              сервисной инфраструктуры, формируя качественную базу для размещения
+              резидентов <strong>industrial</strong> и <strong>light industrial</strong>.
+            </p>
+          </div>
+
+          <div class="location-map-card">
+            <div class="location-map-frame">
+              <iframe
+                title="Карта расположения объекта"
+                src="https://www.google.com/maps?q=55.676541,37.930739&z=17&output=embed"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+              <a
+                class="location-map-point-link"
+                href="https://www.google.com/maps/dir/?api=1&destination=55.676541,37.930739&travelmode=driving"
+                data-navigator-link
+                data-navi-url="yandexnavi://build_route_on_map?lat_to=55.676541&lon_to=37.930739"
+                data-fallback-url="https://www.google.com/maps/dir/?api=1&destination=55.676541,37.930739&travelmode=driving"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Построить маршрут до отметки на карте"
+              ></a>
+            </div>
+
+            <div class="location-map-meta">
+              <p class="location-map-address">
+                Москва, район Некрасовка, пересечение проектируемых проездов 83 и 4296
+              </p>
+              <a
+                class="location-map-link"
+                href="https://www.google.com/maps/dir/?api=1&destination=55.676541,37.930739&travelmode=driving"
+                data-navigator-link
+                data-navi-url="yandexnavi://build_route_on_map?lat_to=55.676541&lon_to=37.930739"
+                data-fallback-url="https://www.google.com/maps/dir/?api=1&destination=55.676541,37.930739&travelmode=driving"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Проложить маршрут
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="roadmap" id="roadmap">
+      <div class="roadmap-shell">
+        <div class="roadmap-heading">
+          <p class="roadmap-kicker">ДОРОЖНАЯ КАРТА</p>
+          <h2>Ожидаемая динамика стоимости</h2>
+        </div>
+
+        <div class="roadmap-timeline" aria-label="Ключевые этапы проекта">
+          <div class="roadmap-timeline-track" aria-hidden="true"></div>
+
+          <article class="roadmap-timeline-point">
+            <p class="roadmap-timeline-date">май 2026</p>
+            <span class="roadmap-timeline-dot"></span>
+            <p class="roadmap-timeline-note">текущий этап</p>
+          </article>
+
+          <article class="roadmap-timeline-point roadmap-timeline-point--accent">
+            <p class="roadmap-timeline-date">июнь 2026</p>
+            <span class="roadmap-timeline-dot"></span>
+            <p class="roadmap-timeline-note">получение РНС</p>
+          </article>
+
+          <article class="roadmap-timeline-point">
+            <p class="roadmap-timeline-date">I кв. 2027</p>
+            <span class="roadmap-timeline-dot"></span>
+            <p class="roadmap-timeline-note">активная стройка</p>
+          </article>
+
+          <article class="roadmap-timeline-point">
+            <p class="roadmap-timeline-date">III кв. 2027</p>
+            <span class="roadmap-timeline-dot"></span>
+            <p class="roadmap-timeline-note">готовность контура</p>
+          </article>
+
+          <article class="roadmap-timeline-point">
+            <p class="roadmap-timeline-date">IV кв. 2027</p>
+            <span class="roadmap-timeline-dot"></span>
+            <p class="roadmap-timeline-note">ввод в эксплуатацию</p>
+          </article>
+        </div>
+
+        <div class="roadmap-panels">
+          <article class="roadmap-panel roadmap-panel--rent">
+            <div class="roadmap-panel-header">
+              <h3>АРЕНДА</h3>
+              <p>ставка за здание целиком, ₽/м²/год без НДС</p>
+            </div>
+
+            <div class="roadmap-chart">
+              <div class="roadmap-grid" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <div class="roadmap-bars" aria-label="Ожидаемая динамика ставки аренды">
+                <article class="roadmap-bar" style="--bar-growth: 0%;">
+                  <div class="roadmap-bar-meta">
+                    <p class="roadmap-bar-value">15 500</p>
+                    <p class="roadmap-bar-change roadmap-bar-change--base">база</p>
+                  </div>
+                  <div class="roadmap-bar-visual">
+                    <span class="roadmap-bar-core"></span>
+                    <span class="roadmap-bar-growth"></span>
+                  </div>
+                  <p class="roadmap-bar-label">май 2026</p>
+                </article>
+
+                <article class="roadmap-bar" style="--bar-growth: 6%;">
+                  <div class="roadmap-bar-meta">
+                    <p class="roadmap-bar-value">16 430</p>
+                    <p class="roadmap-bar-change">+6%</p>
+                  </div>
+                  <div class="roadmap-bar-visual">
+                    <span class="roadmap-bar-core"></span>
+                    <span class="roadmap-bar-growth"></span>
+                  </div>
+                  <p class="roadmap-bar-label">июнь 2026</p>
+                </article>
+
+                <article class="roadmap-bar" style="--bar-growth: 12%;">
+                  <div class="roadmap-bar-meta">
+                    <p class="roadmap-bar-value">17 360</p>
+                    <p class="roadmap-bar-change">+12%</p>
+                  </div>
+                  <div class="roadmap-bar-visual">
+                    <span class="roadmap-bar-core"></span>
+                    <span class="roadmap-bar-growth"></span>
+                  </div>
+                  <p class="roadmap-bar-label">I кв. 2027</p>
+                </article>
+
+                <article class="roadmap-bar" style="--bar-growth: 18%;">
+                  <div class="roadmap-bar-meta">
+                    <p class="roadmap-bar-value">18 290</p>
+                    <p class="roadmap-bar-change">+18%</p>
+                  </div>
+                  <div class="roadmap-bar-visual">
+                    <span class="roadmap-bar-core"></span>
+                    <span class="roadmap-bar-growth"></span>
+                  </div>
+                  <p class="roadmap-bar-label">III кв. 2027</p>
+                </article>
+
+                <article class="roadmap-bar" style="--bar-growth: 25%;">
+                  <div class="roadmap-bar-meta">
+                    <p class="roadmap-bar-value">19 375</p>
+                    <p class="roadmap-bar-change">+25%</p>
+                  </div>
+                  <div class="roadmap-bar-visual">
+                    <span class="roadmap-bar-core"></span>
+                    <span class="roadmap-bar-growth"></span>
+                  </div>
+                  <p class="roadmap-bar-label">IV кв. 2027</p>
+                </article>
+              </div>
+            </div>
+          </article>
+
+          <article class="roadmap-panel roadmap-panel--sale">
+            <div class="roadmap-panel-header">
+              <h3>ПРОДАЖА</h3>
+              <p>цена за здание целиком, ₽/м² без НДС</p>
+            </div>
+
+            <div class="roadmap-chart">
+              <div class="roadmap-grid" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <div class="roadmap-bars" aria-label="Ожидаемая динамика цены продажи">
+                <article class="roadmap-bar" style="--bar-growth: 0%;">
+                  <div class="roadmap-bar-meta">
+                    <p class="roadmap-bar-value">200 000</p>
+                    <p class="roadmap-bar-change roadmap-bar-change--base">база</p>
+                  </div>
+                  <div class="roadmap-bar-visual">
+                    <span class="roadmap-bar-core"></span>
+                    <span class="roadmap-bar-growth"></span>
+                  </div>
+                  <p class="roadmap-bar-label">май 2026</p>
+                </article>
+
+                <article class="roadmap-bar" style="--bar-growth: 8%;">
+                  <div class="roadmap-bar-meta">
+                    <p class="roadmap-bar-value">216 000</p>
+                    <p class="roadmap-bar-change">+8%</p>
+                  </div>
+                  <div class="roadmap-bar-visual">
+                    <span class="roadmap-bar-core"></span>
+                    <span class="roadmap-bar-growth"></span>
+                  </div>
+                  <p class="roadmap-bar-label">июнь 2026</p>
+                </article>
+
+                <article class="roadmap-bar" style="--bar-growth: 18%;">
+                  <div class="roadmap-bar-meta">
+                    <p class="roadmap-bar-value">236 000</p>
+                    <p class="roadmap-bar-change">+18%</p>
+                  </div>
+                  <div class="roadmap-bar-visual">
+                    <span class="roadmap-bar-core"></span>
+                    <span class="roadmap-bar-growth"></span>
+                  </div>
+                  <p class="roadmap-bar-label">I кв. 2027</p>
+                </article>
+
+                <article class="roadmap-bar" style="--bar-growth: 28%;">
+                  <div class="roadmap-bar-meta">
+                    <p class="roadmap-bar-value">256 000</p>
+                    <p class="roadmap-bar-change">+28%</p>
+                  </div>
+                  <div class="roadmap-bar-visual">
+                    <span class="roadmap-bar-core"></span>
+                    <span class="roadmap-bar-growth"></span>
+                  </div>
+                  <p class="roadmap-bar-label">III кв. 2027</p>
+                </article>
+
+                <article class="roadmap-bar" style="--bar-growth: 40%;">
+                  <div class="roadmap-bar-meta">
+                    <p class="roadmap-bar-value">280 000</p>
+                    <p class="roadmap-bar-change">+40%</p>
+                  </div>
+                  <div class="roadmap-bar-visual">
+                    <span class="roadmap-bar-core"></span>
+                    <span class="roadmap-bar-growth"></span>
+                  </div>
+                  <p class="roadmap-bar-label">IV кв. 2027</p>
+                </article>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="roadmap-summary" aria-label="Итоги дорожной карты">
+          <p class="roadmap-summary-item roadmap-summary-item--accent">РНС - июнь 2026</p>
+          <p class="roadmap-summary-item">аренда: 15 500 → 19 375 ₽/м²/год</p>
+          <p class="roadmap-summary-item">продажа: 200 000 → 280 000 ₽/м² без НДС</p>
+          <p class="roadmap-summary-item roadmap-summary-item--muted">только целиком</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rent" id="rent">
+      <div class="rent-shell">
+        <div class="rent-heading">
+          <p class="rent-kicker">АРЕНДА</p>
+          <h2>Коммерческие условия аренды</h2>
+        </div>
+
+        <div class="rent-top">
+          <article class="rent-primary-card">
+            <div class="rent-primary-head">
+              <h3>ЦЕЛИКОМ ЗДАНИЕ</h3>
+            </div>
+
+            <div class="rent-primary-main">
+              <div class="rent-primary-stat">
+                <p class="rent-primary-stat-label">Площадь здания</p>
+                <p class="rent-primary-area">5 507 м²</p>
+              </div>
+
+              <div class="rent-primary-stat">
+                <p class="rent-primary-stat-label">Ставка аренды</p>
+                <p class="rent-primary-rate">15 500 ₽/м²/год</p>
+              </div>
+            </div>
+
+            <div class="rent-primary-meta">
+              <p><strong>Срок аренды</strong> 5–7 лет</p>
+              <p><strong>Обеспечительный платёж</strong> 2 месяца</p>
+            </div>
+          </article>
+
+          <div class="rent-terms" aria-label="Коммерческие условия аренды">
+            <article class="rent-term-card">
+              <p class="rent-term-label">OPEX</p>
+              <p class="rent-term-value">3 000 ₽/м²/год</p>
+            </article>
+
+            <article class="rent-term-card">
+              <p class="rent-term-label">НДС</p>
+              <p class="rent-term-value">22% сверху</p>
+            </article>
+
+            <article class="rent-term-card">
+              <p class="rent-term-label">Коммунальные</p>
+              <p class="rent-term-value">по факту</p>
+            </article>
+
+            <article class="rent-term-card">
+              <p class="rent-term-label">Модель</p>
+              <p class="rent-term-value">open book</p>
+            </article>
+
+            <article class="rent-term-card">
+              <p class="rent-term-label">Индексация</p>
+              <p class="rent-term-value">7% / CPI</p>
+            </article>
+
+            <article class="rent-term-card">
+              <p class="rent-term-label">Fit-out</p>
+              <p class="rent-term-value">2–6 мес.</p>
+            </article>
+
+            <article class="rent-term-card">
+              <p class="rent-term-label">Pre-lease</p>
+              <p class="rent-term-value">скидка 5–7%</p>
+            </article>
+
+            <article class="rent-term-card">
+              <p class="rent-term-label">Срок по блокам</p>
+              <p class="rent-term-value">3–5 лет</p>
+            </article>
+          </div>
+        </div>
+
+        <article class="rent-floor-card">
+          <div class="rent-floor-header">
+            <h3>ПОЭТАЖНАЯ АРЕНДА</h3>
+          </div>
+
+          <div class="rent-floor-table" role="table" aria-label="Поэтажная аренда">
+            <div class="rent-floor-head" role="rowgroup">
+              <div class="rent-floor-row rent-floor-row--head" role="row">
+                <span role="columnheader">Этаж</span>
+                <span role="columnheader">Площадь</span>
+                <span role="columnheader">Высота</span>
+                <span role="columnheader">Нагрузка</span>
+                <span role="columnheader">Ставка</span>
+              </div>
+            </div>
+
+            <div class="rent-floor-body" role="rowgroup">
+              <div class="rent-floor-row" role="row">
+                <span class="rent-floor-name" role="cell" data-label="Этаж">1 этаж</span>
+                <span role="cell" data-label="Площадь">2 509,78 м²</span>
+                <span role="cell" data-label="Высота">8,0 м</span>
+                <span role="cell" data-label="Нагрузка">5,0 т/м²</span>
+                <span class="rent-floor-rate rent-floor-rate--accent" role="cell" data-label="Ставка">18 000 ₽/м²/год</span>
+              </div>
+
+              <div class="rent-floor-row" role="row">
+                <span class="rent-floor-name" role="cell" data-label="Этаж">Антресоль</span>
+                <span role="cell" data-label="Площадь">196,65 м²</span>
+                <span role="cell" data-label="Высота">4,0 м</span>
+                <span role="cell" data-label="Нагрузка">—</span>
+                <span class="rent-floor-rate" role="cell" data-label="Ставка">16 000 ₽/м²/год</span>
+              </div>
+
+              <div class="rent-floor-row" role="row">
+                <span class="rent-floor-name" role="cell" data-label="Этаж">2 этаж</span>
+                <span role="cell" data-label="Площадь">2 571,35 м²</span>
+                <span role="cell" data-label="Высота">6,2 м</span>
+                <span role="cell" data-label="Нагрузка">1,5 т/м²</span>
+                <span class="rent-floor-rate" role="cell" data-label="Ставка">15 000 ₽/м²/год</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="rent-floor-summary">
+            <p class="rent-floor-summary-item rent-floor-summary-item--accent">Срок аренды 3–5 лет</p>
+            <p class="rent-floor-summary-item">Возможна нарезка на автономные блоки</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="sale" id="sale">
+      <div class="sale-shell">
+        <div class="sale-heading">
+          <h2>Коммерческие условия продажи</h2>
+        </div>
+
+        <div class="sale-top">
+          <article class="sale-overview-card">
+            <div class="sale-overview-head">
+              <p class="sale-overview-label">ОБЪЕКТ</p>
+              <p class="sale-overview-name">Промышленный парк в Некрасовке</p>
+            </div>
+
+            <div class="sale-overview-stats">
+              <div class="sale-overview-stat">
+                <p class="sale-overview-stat-label">Площадь здания</p>
+                <p class="sale-overview-stat-value sale-overview-stat-value--accent">5 507 м²</p>
+              </div>
+
+              <div class="sale-overview-stat">
+                <p class="sale-overview-stat-label">Цена продажи</p>
+                <p class="sale-overview-stat-value">200 000 ₽/м²</p>
+              </div>
+            </div>
+
+            <div class="sale-overview-milestones">
+              <p class="sale-overview-pill">РНС - июнь 2026</p>
+              <p class="sale-overview-pill">Ввод IV кв. 2027</p>
+            </div>
+          </article>
+
+          <article class="sale-scenario-card">
+            <div class="sale-scenario-head">
+              <p class="sale-scenario-label">ЦЕНА ПРОДАЖИ без НДС</p>
+              <p class="sale-scenario-total">1 101 400 000</p>
+            </div>
+
+            <div class="sale-scenario-body">
+              <p class="sale-scenario-title">СЦЕНАРИЙ</p>
+              <p class="sale-scenario-text">
+                5% по ПДКП; после получения РНС - заключение ДКПБВ и 30%; далее - 4 равных
+                по сумме платежа до закрытия сделки.
+              </p>
+
+              <div class="sale-scenario-split" aria-label="Структура платежей">
+                <span class="sale-scenario-part sale-scenario-part--accent">5%</span>
+                <span class="sale-scenario-part sale-scenario-part--accent">30%</span>
+                <span class="sale-scenario-part sale-scenario-part--dark">4 × 16,25%</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <a
+          class="sale-schedule-download"
+          href="https://drive.google.com/drive/folders/1519_CaNB8K_sVlrLMKSVtzWFQwf26q4y?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Скачать график платежей
+        </a>
+
+        <article class="sale-schedule-card">
+          <div class="sale-schedule-header">
+            <h3>График платежей</h3>
+            <p>Все суммы указаны без НДС</p>
+          </div>
+
+          <div class="sale-schedule-table" role="table" aria-label="График платежей по продаже">
+            <div class="sale-schedule-head" role="rowgroup">
+              <div class="sale-schedule-row sale-schedule-row--head" role="row">
+                <span role="columnheader">Этап</span>
+                <span role="columnheader">Дата</span>
+                <span role="columnheader">Доля</span>
+                <span role="columnheader">Сумма платежа, ₽</span>
+                <span role="columnheader">Оплачено накопленным итогом, ₽</span>
+                <span role="columnheader">Остаток к оплате, ₽</span>
+              </div>
+            </div>
+
+            <div class="sale-schedule-body" role="rowgroup">
+              <div class="sale-schedule-row" role="row">
+                <div class="sale-stage" role="cell" data-label="Этап">
+                  <span class="sale-stage-marker sale-stage-marker--accent"></span>
+                  <span class="sale-stage-name">ПДКП</span>
+                </div>
+                <span role="cell" data-label="Дата">май 2026</span>
+                <span class="sale-share sale-share--filled" role="cell" data-label="Доля">5%</span>
+                <div class="sale-cell-metric" role="cell" data-label="Сумма платежа, ₽">
+                  <p class="sale-cell-value">55 070 000</p>
+                  <div class="sale-progress sale-progress--payment"><span style="--progress: 5%;"></span></div>
+                </div>
+                <div class="sale-cell-metric" role="cell" data-label="Оплачено накопленным итогом, ₽">
+                  <p class="sale-cell-value">55 070 000</p>
+                  <div class="sale-progress sale-progress--paid"><span style="--progress: 5%;"></span></div>
+                </div>
+                <div class="sale-cell-metric" role="cell" data-label="Остаток к оплате, ₽">
+                  <p class="sale-cell-value">1 046 330 000</p>
+                  <div class="sale-progress sale-progress--remaining"><span style="--progress: 95%;"></span></div>
+                </div>
+              </div>
+
+              <div class="sale-schedule-row sale-schedule-row--muted" role="row">
+                <div class="sale-stage" role="cell" data-label="Этап">
+                  <span class="sale-stage-marker sale-stage-marker--muted"></span>
+                  <span class="sale-stage-name">Получение РНС</span>
+                </div>
+                <span role="cell" data-label="Дата">июнь 2026</span>
+                <span class="sale-share" role="cell" data-label="Доля">—</span>
+                <div class="sale-cell-metric" role="cell" data-label="Сумма платежа, ₽">
+                  <p class="sale-cell-value">—</p>
+                  <div class="sale-progress sale-progress--payment"><span style="--progress: 0%;"></span></div>
+                </div>
+                <div class="sale-cell-metric" role="cell" data-label="Оплачено накопленным итогом, ₽">
+                  <p class="sale-cell-value">55 070 000</p>
+                  <div class="sale-progress sale-progress--paid"><span style="--progress: 5%;"></span></div>
+                </div>
+                <div class="sale-cell-metric" role="cell" data-label="Остаток к оплате, ₽">
+                  <p class="sale-cell-value">1 046 330 000</p>
+                  <div class="sale-progress sale-progress--remaining"><span style="--progress: 95%;"></span></div>
+                </div>
+              </div>
+
+              <div class="sale-schedule-row" role="row">
+                <div class="sale-stage" role="cell" data-label="Этап">
+                  <span class="sale-stage-marker sale-stage-marker--accent"></span>
+                  <span class="sale-stage-name">Заключение ДКПБВ</span>
+                </div>
+                <span role="cell" data-label="Дата">июнь 2026</span>
+                <span class="sale-share sale-share--filled" role="cell" data-label="Доля">30%</span>
+                <div class="sale-cell-metric" role="cell" data-label="Сумма платежа, ₽">
+                  <p class="sale-cell-value">330 420 000</p>
+                  <div class="sale-progress sale-progress--payment"><span style="--progress: 30%;"></span></div>
+                </div>
+                <div class="sale-cell-metric" role="cell" data-label="Оплачено накопленным итогом, ₽">
+                  <p class="sale-cell-value">385 490 000</p>
+                  <div class="sale-progress sale-progress--paid"><span style="--progress: 35%;"></span></div>
+                </div>
+                <div class="sale-cell-metric" role="cell" data-label="Остаток к оплате, ₽">
+                  <p class="sale-cell-value">715 910 000</p>
+                  <div class="sale-progress sale-progress--remaining"><span style="--progress: 65%;"></span></div>
+                </div>
+              </div>
+
+              <div class="sale-schedule-row" role="row">
+                <div class="sale-stage" role="cell" data-label="Этап">
+                  <span class="sale-stage-marker sale-stage-marker--dark"></span>
+                  <span class="sale-stage-name">Равный платеж 1</span>
+                </div>
+                <span role="cell" data-label="Дата">I кв. 2027</span>
+                <span class="sale-share sale-share--filled" role="cell" data-label="Доля">16,25%</span>
+                <div class="sale-cell-metric" role="cell" data-label="Сумма платежа, ₽">
+                  <p class="sale-cell-value">178 977 500</p>
+                  <div class="sale-progress sale-progress--payment"><span style="--progress: 16.25%;"></span></div>
+                </div>
+                <div class="sale-cell-metric" role="cell" data-label="Оплачено накопленным итогом, ₽">
+                  <p class="sale-cell-value">564 467 500</p>
+                  <div class="sale-progress sale-progress--paid"><span style="--progress: 51.25%;"></span></div>
+                </div>
+                <div class="sale-cell-metric" role="cell" data-label="Остаток к оплате, ₽">
+                  <p class="sale-cell-value">536 932 500</p>
+                  <div class="sale-progress sale-progress--remaining"><span style="--progress: 48.75%;"></span></div>
+                </div>
+              </div>
+
+              <div class="sale-schedule-row" role="row">
+                <div class="sale-stage" role="cell" data-label="Этап">
+                  <span class="sale-stage-marker sale-stage-marker--dark"></span>
+                  <span class="sale-stage-name">Равный платеж 2</span>
+                </div>
+                <span role="cell" data-label="Дата">III кв. 2027</span>
+                <span class="sale-share sale-share--filled" role="cell" data-label="Доля">16,25%</span>
+                <div class="sale-cell-metric" role="cell" data-label="Сумма платежа, ₽">
+                  <p class="sale-cell-value">178 977 500</p>
+                  <div class="sale-progress sale-progress--payment"><span style="--progress: 16.25%;"></span></div>
+                </div>
+                <div class="sale-cell-metric" role="cell" data-label="Оплачено накопленным итогом, ₽">
+                  <p class="sale-cell-value">743 445 000</p>
+                  <div class="sale-progress sale-progress--paid"><span style="--progress: 67.5%;"></span></div>
+                </div>
+                <div class="sale-cell-metric" role="cell" data-label="Остаток к оплате, ₽">
+                  <p class="sale-cell-value">357 955 000</p>
+                  <div class="sale-progress sale-progress--remaining"><span style="--progress: 32.5%;"></span></div>
+                </div>
+              </div>
+
+              <div class="sale-schedule-row" role="row">
+                <div class="sale-stage" role="cell" data-label="Этап">
+                  <span class="sale-stage-marker sale-stage-marker--dark"></span>
+                  <span class="sale-stage-name">Равный платеж 3</span>
+                </div>
+                <span role="cell" data-label="Дата">IV кв. 2027</span>
+                <span class="sale-share sale-share--filled" role="cell" data-label="Доля">16,25%</span>
+                <div class="sale-cell-metric" role="cell" data-label="Сумма платежа, ₽">
+                  <p class="sale-cell-value">178 977 500</p>
+                  <div class="sale-progress sale-progress--payment"><span style="--progress: 16.25%;"></span></div>
+                </div>
+                <div class="sale-cell-metric" role="cell" data-label="Оплачено накопленным итогом, ₽">
+                  <p class="sale-cell-value">922 422 500</p>
+                  <div class="sale-progress sale-progress--paid"><span style="--progress: 83.75%;"></span></div>
+                </div>
+                <div class="sale-cell-metric" role="cell" data-label="Остаток к оплате, ₽">
+                  <p class="sale-cell-value">178 977 500</p>
+                  <div class="sale-progress sale-progress--remaining"><span style="--progress: 16.25%;"></span></div>
+                </div>
+              </div>
+
+              <div class="sale-schedule-row sale-schedule-row--muted" role="row">
+                <div class="sale-stage" role="cell" data-label="Этап">
+                  <span class="sale-stage-marker sale-stage-marker--dark"></span>
+                  <span class="sale-stage-name">Равный платеж 4 / закрытие сделки</span>
+                </div>
+                <span role="cell" data-label="Дата">I кв. 2028</span>
+                <span class="sale-share sale-share--filled" role="cell" data-label="Доля">16,25%</span>
+                <div class="sale-cell-metric" role="cell" data-label="Сумма платежа, ₽">
+                  <p class="sale-cell-value">178 977 500</p>
+                  <div class="sale-progress sale-progress--payment"><span style="--progress: 16.25%;"></span></div>
+                </div>
+                <div class="sale-cell-metric" role="cell" data-label="Оплачено накопленным итогом, ₽">
+                  <p class="sale-cell-value">1 101 400 000</p>
+                  <div class="sale-progress sale-progress--paid"><span style="--progress: 100%;"></span></div>
+                </div>
+                <div class="sale-cell-metric" role="cell" data-label="Остаток к оплате, ₽">
+                  <p class="sale-cell-value">0</p>
+                  <div class="sale-progress sale-progress--remaining"><span style="--progress: 0%;"></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="contacts" id="contacts">
+    <div class="contacts-shell">
+      <div class="contacts-grid">
+        <section class="contacts-column contacts-column--primary">
+          <article class="contacts-item">
+            <div class="contacts-item-copy">
+              <p class="contacts-item-label">Телефон</p>
+              <a class="contacts-item-value contacts-item-value--phone" href="tel:+79585004830">+7 (958) 500&ndash;48&ndash;30</a>
+            </div>
+          </article>
+
+          <article class="contacts-item">
+            <div class="contacts-item-copy">
+              <p class="contacts-item-label">E-mail</p>
+              <a class="contacts-item-value" href="mailto:s.zharov@abcentrum.ru">s.zharov@abcentrum.ru</a>
+            </div>
+          </article>
+        </section>
+
+        <section class="contacts-column contacts-column--telegram">
+          <p class="contacts-section-label">Telegram</p>
+          <article class="contacts-telegram-card">
+            <div class="contacts-telegram-copy">
+              <div class="contacts-telegram-head">
+                <img src="assets/telegram.svg" alt="" class="contacts-telegram-inline-icon" />
+                <p class="contacts-item-label">Telegram / обновления</p>
+              </div>
+              <a class="contacts-telegram-handle" href="https://t.me/abcentrum_dev" target="_blank" rel="noreferrer">@ABCENTRUM_DEV</a>
+            </div>
+          </article>
+        </section>
+
+        <section class="contacts-column contacts-column--address">
+          <article class="contacts-item">
+            <div class="contacts-item-copy">
+              <p class="contacts-item-label">Адрес</p>
+              <p class="contacts-item-value contacts-item-value--text">
+                Москва, район Некрасовка, пересечение проектируемых проездов 83 и 4296
+              </p>
+            </div>
+          </article>
+        </section>
+
+        <section class="contacts-column contacts-column--route">
+          <p class="contacts-section-label">Маршрут</p>
+          <article class="contacts-route">
+            <div class="contacts-route-copy">
+              <p class="contacts-item-label">Яндекс Карты</p>
+              <a
+                class="contacts-route-link"
+                href="https://www.google.com/maps/dir/?api=1&destination=55.676541,37.930739&travelmode=driving"
+                data-navigator-link
+                data-navi-url="yandexnavi://build_route_on_map?lat_to=55.676541&lon_to=37.930739"
+                data-fallback-url="https://www.google.com/maps/dir/?api=1&destination=55.676541,37.930739&travelmode=driving"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Проложить маршрут
+              </a>
+            </div>
+          </article>
+        </section>
+      </div>
+
+      <div class="contacts-bottomline">
+        <p class="contacts-copy">&copy;ABCENTRUM 2023</p>
+        <a class="contacts-site contacts-site--footer" href="https://abcentrum.ru" target="_blank" rel="noreferrer">
+          <img src="assets/elements/globe-illustration.svg" alt="" class="contacts-side-icon contacts-side-icon--globe" />
+          <span>abcentrum.ru</span>
+        </a>
+        <div class="contacts-legal" aria-label="Реквизиты компании">
+          <p class="contacts-legal-name">ООО "АБ Ц"</p>
+          <p class="contacts-legal-meta">
+            <span>ИНН 7743207456</span>
+            <span>ОГРН 1177746448406</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="contacts-watermark" aria-hidden="true">
+        <div class="contacts-watermark-track">
+          <div class="contacts-watermark-group">
+            <img src="assets/logo.svg" alt="" class="contacts-watermark-logo" />
+            <img src="assets/logo.svg" alt="" class="contacts-watermark-logo" />
+            <img src="assets/logo.svg" alt="" class="contacts-watermark-logo" />
+            <img src="assets/logo.svg" alt="" class="contacts-watermark-logo" />
+          </div>
+          <div class="contacts-watermark-group">
+            <img src="assets/logo.svg" alt="" class="contacts-watermark-logo" />
+            <img src="assets/logo.svg" alt="" class="contacts-watermark-logo" />
+            <img src="assets/logo.svg" alt="" class="contacts-watermark-logo" />
+            <img src="assets/logo.svg" alt="" class="contacts-watermark-logo" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  
+  <!-- ── Favorites panel ── -->
+  <div class="favpanel-backdrop" id="favPanelBackdrop" aria-hidden="true"></div>
+  <aside class="favpanel" id="favPanel" aria-label="Избранное" aria-hidden="true">
+    <div class="favpanel__head">
+      <h2 class="favpanel__title">ИЗБРАННОЕ</h2>
+      <button class="favpanel__close" id="favPanelClose" type="button" aria-label="Закрыть избранное">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <line x1="1" y1="1" x2="13" y2="13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="13" y1="1" x2="1" y2="13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="favpanel__body" id="favPanelBody">
+      <!-- Rendered by JS -->
+    </div>
+
+    <div class="favpanel__footer">
+      <div class="favpanel__contacts">
+        <a class="favpanel__contact-link" href="tel:+79585004830">+7 (958) 500-48-30</a>
+        <a class="favpanel__contact-link" href="mailto:s.zharov@abcentrum.ru">s.zharov@abcentrum.ru</a>
+      </div>
+      <button class="favpanel__cta capsule-cut" type="button" data-open-callback>
+        <span>ОСТАВИТЬ ЗАЯВКУ</span>
+        <span aria-hidden="true">↗</span>
+      </button>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
