@@ -447,7 +447,7 @@ function initNavigatorLinks() {
 
       window.setTimeout(() => {
         if (!didHidePage && document.visibilityState === 'visible') {
-          window.open(fallbackUrl, '_blank', 'noopener');
+          window.location.assign(fallbackUrl);
         }
       }, 900);
     });
